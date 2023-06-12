@@ -1,0 +1,28 @@
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.services .service-box {
+  width: 33.3333333333%;
+  float: left;
+  padding: 20px;
+  text-align: center;
+}
+.services .service-box h3 {
+  text-align: center;
+  -webkit-columns: #333;
+     -moz-columns: #333;
+          columns: #333;
+}
+.services .service-box h3 i {
+  font-size: 27px;
+  position: relative;
+  top: 2px;
+}
+.services .service-box p {
+  color: #777;
+  text-align: center;
+}
+.services .service-box a {
+  color: #ffd03b;
+}

@@ -1,0 +1,43 @@
+@use "../helpers/-varibles.scss" as *;
+.players {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .player-box {
+    width: (100% / 5);
+    float: $float;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    @media #{$maxsmall} {
+      margin-bottom: 40px;
+      width: (100% / 2);
+      margin-bottom: 40px;
+    }
+    @media #{$maxmobile} {
+      width: 100%;
+    }
+    img {
+      max-width: 100%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    h3 {
+      columns: $blackcolor;
+      font-weight: normal;
+      font-size: 17px;
+      span {
+        font-weight: bold;
+        color: $blackcolor;
+        font-size: 17px;
+      }
+    }
+    p {
+      color: $pcolor;
+      font-size: 15px;
+    }
+    a {
+      color: $pinkcolor;
+    }
+  }
+}

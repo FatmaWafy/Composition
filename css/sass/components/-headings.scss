@@ -1,0 +1,26 @@
+@use "../helpers/-varibles.scss" as *;
+.head-with-border {
+  position: relative;
+  h2 {
+    background-color: $pinkcolor;
+    color: white;
+    border-radius: 15px;
+    margin: 40px auto;
+    width: 400px;
+    padding: 10px 15px;
+    text-align: center;
+    @media #{$maxmobile} {
+      width: 300px;
+    }
+    &:before {
+      content: "";
+      width: 100%;
+      height: 1.5px;
+      background-color: $graycolor;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}

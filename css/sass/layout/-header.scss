@@ -1,0 +1,74 @@
+@use "../helpers/-varibles.scss" as *;
+@use "../helpers/-mixins.scss" as *;
+
+.header {
+  padding: 20px 0;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: white;
+  @include prefixer(box-shadow, 0px 0px 10px 1px $pinkcolor, webkit);
+  .logo {
+    position: relative;
+    @media #{$minsmall} {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+    @media #{$minmid} {
+      width: 30%;
+      float: $float;
+      text-align: $textalign;
+    }
+    h1 {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+  }
+  .navbar {
+    @include prefixer(box-shadow, 0px 0px 10px 1px $pinkcolor, webkit);
+    overflow: hidden;
+    text-align: $textalign;
+    background-color: white;
+    border-radius: 15px;
+    @media #{$minsmall} {
+      float: none;
+      margin-top: 30px;
+      display: block !important;
+    }
+    @media #{$minmid} {
+      width: 70%;
+      float: $float;
+      margin-top: 1em;
+    }
+    @media #{$maxmobile} {
+      display: none;
+    }
+    li {
+      width: 20%;
+      float: $float;
+      font-size: 18px;
+      text-align: center;
+      @media #{$maxmobile} {
+        display: block;
+        float: none;
+      }
+      a {
+        display: block;
+        padding: 20px 10px;
+        color: black;
+        transition: 0.3s;
+        cursor: pointer;
+        &.active,
+        &:hover {
+          color: $pinkcolor;
+        }
+        @media #{$maxmobile} {
+          padding: 10px;
+          font-size: 10px;
+          width: 100%;
+          text-align: $textalign;
+        }
+      }
+    }
+  }
+}

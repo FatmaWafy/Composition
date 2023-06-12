@@ -1,0 +1,6 @@
+@use "./-varibles.scss" as *;
+
+@if $sitelanguage == arabic {
+  $float: right;
+  $textalign: right;
+}

@@ -1,0 +1,44 @@
+// for mediaquaries
+@mixin mediaquaries($scren) {
+  @if $scren == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $scren == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $scren == medium {
+    @media (min-width: 992) and (max-width: 1199px) {
+    }
+  } @else if $scren == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+//for overlay
+@mixin overlay() {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+//for prefixer
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property }: $value;
+  }
+  #{$property }: $value;
+}
+//for animation
+// @mixin animation($animation-name) {
+//   @-webkit-keyframes #{$animation-name} {
+//     @content;
+//   }
+//   @-moz-keyframes #{$animation-name} {
+//     @content;
+//   }
+// }
+///////////////////////////

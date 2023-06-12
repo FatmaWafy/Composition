@@ -1,0 +1,44 @@
+@use "../helpers/-varibles.scss" as *;
+@use "../helpers/-mixins.scss" as *;
+
+.btn {
+  @include prefixer(box-shadow, 0px 0px 10px 1px $pinkcolor, webkit moz);
+  background-color: white;
+  padding: 8px;
+  border: 2px solid #d63c69;
+  color: #d63c69;
+  font-weight: bold;
+  font-size: 11px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(white, 0.2);
+  }
+}
+
+.toggler {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  display: none;
+  @media #{$maxmobile} {
+    display: block;
+  }
+  span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 3px;
+    background-color: $pinkcolor;
+    border-radius: 5px;
+  }
+}
+.navbar .open {
+  transform: translateY(0);
+}

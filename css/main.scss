@@ -1,0 +1,31 @@
+@use "./sass/helpers/-varibles.scss" as *;
+@use "./sass/helpers/-functions.scss" as *;
+@use "./sass/helpers/-mixins.scss" as *;
+@use "./sass/components/-buttons.scss" as *;
+@use "./sass/components/-headings.scss" as *;
+@use "./sass/layout/-grid.scss" as *;
+@use "./sass/layout/-header.scss" as *;
+@use "./sass/layout/-footer.scss" as *;
+@use "./sass/layout/-slider.scss" as *;
+@use "./sass/pages/-services.scss" as *;
+@use "./sass/pages/-players.scss" as *;
+@use "./sass/pages/-lorem.scss" as *;
+
+body {
+  background-color: #bab5b533;
+  font: {
+    size: 16px;
+    weight: normal;
+    family: tahoma;
+  }
+  text: {
+    transform: capitalize;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
